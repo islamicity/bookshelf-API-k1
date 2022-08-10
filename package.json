@@ -1,0 +1,26 @@
+{
+  "name": "bookshelf-api-k1",
+  "version": "1.0.0",
+  "description": "Bookshelf API Kriteria 1 : API Dapat Menyimpan Buku",
+  "main": "index.js",
+
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/islamicity/bookshelf-API-k1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "nanoid": "^3.3.4"
+  },
+  "bugs": {
+    "url": "https://github.com/islamicity/bookshelf-API-k1/issues"
+  },
+  "homepage": "https://github.com/islamicity/bookshelf-API-k1#readme"
+}
