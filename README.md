@@ -34,8 +34,8 @@ Objek buku yang disimpan pada server harus memiliki struktur seperti contoh di b
 routes.js
 {
   method: 'POST',
-  path: '/booknotes',
-  handler: addNoteHandler,
+  path: '/books',
+  handler: addBooksHandler,
 },
 
 Properti yang ditebalkan diolah dan didapatkan di sisi server. Berikut penjelasannya:
@@ -44,7 +44,7 @@ npm install nanoid@3.x.x
 
 const { nanoid } = require('nanoid');
  
-const addNoteHandler = (request, h) => {
+const addBooksHandler = (request, h) => {
   const { title, tags, body } = request.payload;
  
   const id = nanoid(16);
@@ -138,9 +138,9 @@ Response Body:
         "bookId": "1L7ZtDUFeGs7VlEt"
     }
 }
-
-allbooks.push(newBook);
-const isSuccess = allbooks.filter((book) => book.id === id).length > 0;
+<b>
+allnotesandbooks.push(newBook);
+const isSuccess = allnotesandbooks.filter((book) => book.id === id).length > 0;
 if (isSuccess) {
     const response = h.response({
       status: 'success',
@@ -152,4 +152,4 @@ if (isSuccess) {
     response.code(201);
     return response;
  }
-
+</b>
