@@ -67,61 +67,7 @@ const addBooksHandler = (request, h) => {
 
 };
 
-const getAllBooksHandler = (request, h) => {
-  const books = allnotesandbooks.filter((book) => {
-    if (request.query.name) {
-      return book.name.toLowerCase().indexOf(request.query.name.toLowerCase()) > -1;
-    }
-    if (request.query.reading === '0') {
-      return !book.reading;
-    }
-    if (request.query.reading === '1') {
-      return book.reading;
-    }
-    if (request.query.finished === '0') {
-      return !book.finished;
-    }
-    if (request.query.finished === '1') {
-      return book.finished;
-    }
-    return true;
-  }).map((book) => ({
-    id: book.id,
-    name: book.name,
-    publisher: book.publisher,
-  }));
-  const response = h.response({
-    status: 'success',
-    data: {
-      books,
-    },
-  });
-  response.code(200);
-  return response;
-};
-const getBookByIdHandler = (request, h) => {
-  const { id } = request.params;
-
-  const book = allnotesandbooks.filter((n) => n.id === id)[0];
-
-  if (book !== undefined) {
-    return {
-      status: 'success',
-      data: {
-        book,
-      },
-    };
-  }
-  const response = h.response({
-    status: 'fail',
-    message: 'Buku tidak ditemukan',
-  });
-  response.code(404);
-  return response;
-};
-
 module.exports = {
     addBooksHandler,
-    getAllBooksHandler,
-    getBookByIdHandler,
 };
+ 
