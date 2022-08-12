@@ -1,6 +1,11 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable object-curly-newline */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable indent */
 const {
-    addBooksHandler, getAllBooksHandler, getBookByIdHandler, editBookByIdHandler,
-  deleteBookByIdHandler, getBookByNameHandler, } = require('./handler');
+  addBooksHandler, getAllBooksHandler, getBookByIdHandler, editBookByIdHandler,
+  deleteBookByIdHandler, getBookByNameHandler } = require('./handler');
   
   const routes = [
     {
@@ -28,11 +33,11 @@ const {
     path: '/books/{id}',
     handler: deleteBookByIdHandler,
   },
-  // {
-  //   method: 'GET',
-  //   path: '/books/{name?}',
-  //   handler: getBookByNameHandler,
-  // },
+//  {
+//   method: 'GET',
+//  path: '/books/{name?}',
+//  handler: getBookByNameHandler,
+//  },
 
 ];
 module.exports = routes;

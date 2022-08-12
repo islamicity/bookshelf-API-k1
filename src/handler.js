@@ -1,3 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable eol-last */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable indent */
+/* eslint-disable import/no-unresolved */
 const { nanoid } = require('nanoid');
 const allnotesandbooks = require('./allnotesandbooks');
 
@@ -64,7 +69,6 @@ const addBooksHandler = (request, h) => {
   });
   response.code(500);
   return response;
-
 };
 
 const getAllBooksHandler = (request, h) => {
@@ -127,7 +131,6 @@ const editBookByIdHandler = (request, h) => {
     } = request.payload;
     const updatedAt = new Date().toISOString();
     const finished = pageCount === readPage;
-  
     if (name == null) {
       const response = h.response({
         status: 'fail',

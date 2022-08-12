@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable eol-last */
+/* eslint-disable import/no-unresolved */
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 
